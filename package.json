@@ -1,0 +1,25 @@
+{
+  "name": "md-generate",
+  "version": "0.1.0",
+  "description": "A CLI for generating new markdown files with front matter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "md-generate": "./index.js"
+  },
+  "keywords": [
+    "CLI",
+    "Markdown"
+  ],
+  "author": "Levi McGranahan",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "commander": "^4.1.0",
+    "fs-extra": "^8.1.0",
+    "gray-matter": "^4.0.2",
+    "inquirer": "^7.0.3"
+  }
+}
