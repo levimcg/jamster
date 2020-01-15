@@ -12,7 +12,7 @@ program
   .option('-c, --config <configFile>', 'Specify which configuration file you want to use.')
   .arguments('<file>')
   .action(file => {
-    const explorer = cosmiconfigSync('md-jammer');
+    const explorer = cosmiconfigSync('jamster');
     let config;
     
     if (program.config) {

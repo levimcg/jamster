@@ -1,5 +1,5 @@
 {
-  "name": "md-jammer",
+  "name": "jamster",
   "version": "0.1.0",
   "description": "A CLI for generating new markdown files with front-matter",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "jam": "./index.js"
+    "jamster": "./index.js"
   },
   "keywords": [
     "CLI",
