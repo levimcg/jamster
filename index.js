@@ -1,19 +1,20 @@
 #!/usr/bin/env node
 
 const chalk = require('chalk');
+const { cosmiconfigSync } = require('cosmiconfig');
 const fs = require('fs-extra');
 const matter = require('gray-matter');
 const pkg = require('./package.json');
 const program = require('commander');
-const { cosmiconfigSync } = require('cosmiconfig');
 
 program.version(pkg.version);
 program
   .option('-c, --config <configFile>')
   .arguments('<file>')
   .action(file => {
-    let config;
     const explorer = cosmiconfigSync('md-generate');
+    let config;
+    
     if (program.config) {
       config = explorer.load(`./${program.config}`);
     } else {
@@ -23,6 +24,7 @@ program
     if (!config) {
       config = require('./lib/defaults');
     }
+
     const currentWorkingDir = process.cwd();
     const filePath = `${currentWorkingDir}/${file}`;
     const frontMatterContents = matter.stringify('', config.config);
@@ -30,10 +32,11 @@ program
     fs.outputFile(filePath, frontMatterContents, err => {
       if (err) {
         console.log(err);
+        console.log(chalk.blueBright('Exiting'));
         process.exit(1);
       } else {
         console.log(
-          chalk.green.bold(`\n 🎉 A new file was create at: ${filePath} \n`)
+          chalk.greenBright.bold(`\n 🎉 A new file was create at: ${filePath} \n`)
         );
       }
     });
