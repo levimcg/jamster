@@ -9,10 +9,10 @@ const program = require('commander');
 
 program.version(pkg.version);
 program
-  .option('-c, --config <configFile>')
+  .option('-c, --config <configFile>', 'Specify which configuration file you want to use.')
   .arguments('<file>')
   .action(file => {
-    const explorer = cosmiconfigSync('md-generate');
+    const explorer = cosmiconfigSync('md-jammer');
     let config;
     
     if (program.config) {
