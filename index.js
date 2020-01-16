@@ -20,7 +20,7 @@ program
     } else {
       config = explorer.search();
     }
-    
+
     if (!config) {
       config = require('./lib/defaults');
     }
