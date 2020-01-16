@@ -1,6 +1,6 @@
 {
   "name": "jamster",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A CLI for generating new markdown files with front-matter",
   "main": "index.js",
   "scripts": {
