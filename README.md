@@ -1,4 +1,4 @@
-# Jamster
+# 🤙 Jamster
 A simple command line tool for generating markdown files with front matter for JAMstack sites. Inspired by [Hugo's](https://gohugo.io/commands/hugo_new/) `hugo new`, but for the JavaScript ecosystem.
 
 ## About
